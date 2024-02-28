@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'lib-ngx-expanding-text',
+  selector: 'ngx-expanding-text',
   template: `
     <p>
       ngx-expanding-text works!
     </p>
   `,
-  styles: [
-  ]
+  styleUrls: ['ngx-expanding-text.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgxExpandingTextComponent implements OnInit {
 
