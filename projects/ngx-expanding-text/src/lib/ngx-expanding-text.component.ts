@@ -1,5 +1,6 @@
 import {
     ChangeDetectionStrategy,
+    ChangeDetectorRef,
     Component,
     EventEmitter,
     Input,
@@ -9,6 +10,7 @@ import {
     SimpleChanges,
     TemplateRef,
 } from '@angular/core';
+import { TextToggleEvent } from './types';
 
 @Component({
     selector: 'ngx-expanding-text',
@@ -51,10 +53,12 @@ export class NgxExpandingTextComponent implements OnChanges, OnInit {
     @Input() public moreButtonTemplate: TemplateRef<any> | null = null;
     @Input() public lessButtonTemplate: TemplateRef<any> | null = null;
 
-    @Output() public toggle = new EventEmitter<{ isExpanded: boolean }>();
+    @Output() public toggle = new EventEmitter<TextToggleEvent>();
 
     private cachedTextForView: string = '';
     public isExpanded: boolean = false;
+
+    constructor(private readonly changeDetectorRef: ChangeDetectorRef) {}
 
     ngOnChanges(changes: SimpleChanges): void {
         if (
@@ -82,6 +86,7 @@ export class NgxExpandingTextComponent implements OnChanges, OnInit {
         this.isExpanded = !this.isExpanded;
         this.cachedTextForView = this.getTextForView();
         this.toggle.emit({ isExpanded: this.isExpanded });
+        this.changeDetectorRef.detectChanges();
     }
 
     private getTextForView(): string {
