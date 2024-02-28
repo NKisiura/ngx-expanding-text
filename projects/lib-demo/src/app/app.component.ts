@@ -7,7 +7,7 @@ import { ExampleRoute } from './shared/types/example-route.enum';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-    public githubRepositoryLink = '';
-
+    public githubRepositoryLink =
+        'https://github.com/NKisiura/ngx-expanding-text';
     public exampleRoutes = Object.values(ExampleRoute);
 }
