@@ -1,11 +1,12 @@
-<div class=" border-gray-200 shadow-md py-4 mb-4">
+<div class="border-gray-200 shadow-md py-4 mb-4">
     <div class="container flex items-center gap-4">
         <span class="text-2xl font-medium">ngx-expanding-text</span>
-        <a [href]="githubRepositoryLink"
-           target="_blank"
-           class="github-link flex items-center gap-1 text-xs font-semibold border rounded-md px-2 py-1"
+        <a
+            [href]="githubRepositoryLink"
+            target="_blank"
+            class="github-link flex items-center gap-1 text-xs font-semibold border rounded-md px-2 py-1"
         >
-            <img src="assets/github-mark.svg" alt="gh-icon" class="w-4">
+            <img src="assets/github-mark.svg" alt="gh-icon" class="w-4" />
             <span>Github</span>
         </a>
     </div>
@@ -13,12 +14,13 @@
 
 <div class="container flex flex-col md:flex-row gap-4">
     <div class="sidebar flex flex-col">
-        <a *ngFor="let route of exampleRoutes"
-           [routerLink]="route"
-           routerLinkActive="border-gray-800 text-gray-800 pl-3"
-           class="example-link text-lg py-2 px-2 border-l-4 border-transparent text-gray-600 hover:text-gray-800 transition-colors"
+        <a
+            *ngFor="let route of exampleRoutes"
+            [routerLink]="route"
+            routerLinkActive="border-gray-800 text-gray-800 pl-3"
+            class="example-link text-lg py-2 px-2 border-l-4 border-transparent text-gray-600 hover:text-gray-800 transition-colors"
         >
-            {{route | kebabToNormal}}
+            {{ route | kebabToNormal }}
         </a>
     </div>
     <div class="flex-grow">

@@ -1,14 +1,16 @@
-<app-example-viewer [title]="'You can toggle text by calling toggleTextExpansion method from the component ref'"
-                    [ghExampleLink]="ghExampleLink"
+<app-example-viewer
+    [title]="
+        'You can toggle text by calling toggleTextExpansion method from the component ref'
+    "
+    [ghExampleLink]="ghExampleLink"
 >
-    <ngx-expanding-text #expandingText
-                        [text]="lorem200"
-    ></ngx-expanding-text>
+    <ngx-expanding-text #expandingText [text]="lorem200"></ngx-expanding-text>
 
     <div class="mt-4">
-        <button type="button"
-                class="custom-button"
-                (click)="expandingText.toggleTextExpansion()"
+        <button
+            type="button"
+            class="custom-button"
+            (click)="expandingText.toggleTextExpansion()"
         >
             Toggle text
         </button>

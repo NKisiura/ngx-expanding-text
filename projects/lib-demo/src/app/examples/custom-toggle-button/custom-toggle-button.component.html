@@ -1,17 +1,20 @@
-<app-example-viewer [title]="'You can provide template for toggle button'"
-                    [ghExampleLink]="ghExampleLink"
+<app-example-viewer
+    [title]="'You can provide template for toggle button'"
+    [ghExampleLink]="ghExampleLink"
 >
-    <ngx-expanding-text [text]="lorem200"
-                        [lessButtonTemplate]="customToggleButton"
-                        [moreButtonTemplate]="customToggleButton"
+    <ngx-expanding-text
+        [text]="lorem200"
+        [lessButtonTemplate]="customToggleButton"
+        [moreButtonTemplate]="customToggleButton"
     ></ngx-expanding-text>
 </app-example-viewer>
 
-<ng-template #customToggleButton let-toggleFn="toggleFn" let-isExpanded="isExpanded">
-    <button type="button"
-            class="custom-button"
-            (click)="toggleFn()"
-    >
-        {{isExpanded ? 'Show less' : 'Show more'}}
+<ng-template
+    #customToggleButton
+    let-toggleFn="toggleFn"
+    let-isExpanded="isExpanded"
+>
+    <button type="button" class="custom-button" (click)="toggleFn()">
+        {{ isExpanded ? 'Show less' : 'Show more' }}
     </button>
 </ng-template>
