@@ -12,6 +12,31 @@ import {
 } from '@angular/core';
 import { TextToggleEvent } from './types';
 
+/**
+ * `NgxExpandingTextComponent` is a component that wraps text and allows it to be expanded or collapsed. It is useful for displaying long text in a limited space.
+ *
+ * @example
+ * <ngx-expanding-text
+ *    [text]="yourText"
+ *    [charCountLimit]="100"
+ *    [showEllipsis]="true"
+ *    [initiallyExpanded]="false"
+ *    [moreButtonText]="'Show More'"
+ *    [lessButtonText]="'Show Less'"
+ *    (toggle)="yourToggleFunction($event)"
+ * ></ngx-expanding-text>
+ *
+ * @Input {string} text - The raw text to be displayed in the component.
+ * @Input {number} charCountLimit - The character count limit for the collapsed text view.
+ * @Input {boolean} showEllipsis - Whether to show ellipsis when the text is collapsed.
+ * @Input {boolean} initiallyExpanded - Whether the text should be initially expanded.
+ * @Input {string} moreButtonText - The text for the 'Show More' button.
+ * @Input {string} lessButtonText - The text for the 'Show Less' button.
+ * @Input {TemplateRef<any>} moreButtonTemplate - A custom template for the 'Show More' button.
+ * @Input {TemplateRef<any>} lessButtonTemplate - A custom template for the 'Show Less' button.
+ *
+ * @Output {TextToggleEvent} toggle - An event that is emitted when the text is expanded or collapsed.
+ */
 @Component({
     selector: 'ngx-expanding-text',
     template: `
