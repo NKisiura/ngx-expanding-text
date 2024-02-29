@@ -1,6 +1,9 @@
 # NgxExpandingText
 ngx-expanding-text is a component that wraps text and allows it to be expanded or collapsed. It is useful for displaying long text in a limited space.
 
+## Preview
+[Demo App Link](https://nkisiura.github.io/ngx-expanding-text)
+
 ## Installation
 Run the following command to install the library
 ```
