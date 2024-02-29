@@ -40,7 +40,7 @@ import { TextToggleEvent } from './types';
 @Component({
     selector: 'ngx-expanding-text',
     template: `
-        <span>{{ textForView }}</span>
+        <span class="expanding-text">{{ textForView }}</span>
 
         <ng-container *ngIf="isTextLongerThanLimit">
             <ng-container
@@ -57,7 +57,10 @@ import { TextToggleEvent } from './types';
         </ng-container>
 
         <ng-template #defaultButtonTemplate>
-            <button class="toggle-button" (click)="toggleTextExpansion()">
+            <button
+                class="expanding-text-toggle-button"
+                (click)="toggleTextExpansion()"
+            >
                 {{ isExpanded ? lessButtonText : moreButtonText }}
             </button>
         </ng-template>
