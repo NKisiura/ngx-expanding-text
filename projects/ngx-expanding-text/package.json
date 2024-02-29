@@ -1,9 +1,19 @@
 {
   "name": "ngx-expanding-text",
   "version": "0.0.1",
+  "keywords": [
+    "angular"
+  ],
+  "author": {
+    "name": "Nikita Kisiura",
+    "email": "nikita.kisiura@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/NKisiura/ngx-expanding-text"
+  },
   "peerDependencies": {
-    "@angular/common": "^12.2.0",
-    "@angular/core": "^12.2.0"
+    "@angular/common": "^12.0.0",
+    "@angular/core": "^12.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
