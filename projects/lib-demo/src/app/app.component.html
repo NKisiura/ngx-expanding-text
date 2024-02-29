@@ -13,7 +13,7 @@
 </div>
 
 <div class="container flex flex-col md:flex-row gap-4 py-4">
-    <div class="sidebar flex flex-col">
+    <div class="sidebar flex flex-col relative md:sticky top-0 md:top-4 h-full">
         <a
             *ngFor="let route of exampleRoutes"
             [routerLink]="route"
