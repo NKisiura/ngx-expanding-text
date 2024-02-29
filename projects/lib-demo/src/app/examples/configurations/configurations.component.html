@@ -1,0 +1,85 @@
+<div class="flex flex-col gap-4">
+    <app-example-viewer
+            [title]="'The character count limit for the collapsed text view'"
+            [ghExampleLink]="ghExampleLink"
+    >
+        <div class="flex gap-2 mb-4">
+            <label>Character count limit:</label>
+            <input type="number"
+                   class="border border-gray-400 rounded-md px-2"
+                   [(ngModel)]="charCountLimit"
+            >
+        </div>
+        <ngx-expanding-text
+                [text]="lorem200"
+                [charCountLimit]="charCountLimit"
+        ></ngx-expanding-text>
+    </app-example-viewer>
+
+    <app-example-viewer
+            [title]="'Whether to show ellipsis when the text is collapsed'"
+            [ghExampleLink]="ghExampleLink"
+    >
+        <div class="flex gap-2 mb-4">
+            <label>Show ellipsis:</label>
+            <input type="checkbox"
+                   [(ngModel)]="showEllipsis"
+            >
+        </div>
+        <ngx-expanding-text
+                [text]="lorem200"
+                [showEllipsis]="showEllipsis"
+        ></ngx-expanding-text>
+    </app-example-viewer>
+
+    <app-example-viewer
+            [title]="'Provide custom text for the show more and show less buttons'"
+            [ghExampleLink]="ghExampleLink"
+    >
+        <div class="grid">
+            <div class="flex gap-2 mb-4">
+                <label style="min-width: 170px">Show more button text:</label>
+                <input type="text"
+                       class="border border-gray-400 rounded-md px-2"
+                       [(ngModel)]="showMoreText"
+                >
+            </div>
+            <div class="flex gap-2 mb-4">
+                <label style="min-width: 170px">Show less button text:</label>
+                <input type="text"
+                       class="border border-gray-400 rounded-md px-2"
+                       [(ngModel)]="showLessText"
+                >
+            </div>
+        </div>
+
+        <ngx-expanding-text
+                [text]="lorem200"
+                [moreButtonText]="showMoreText"
+                [lessButtonText]="showLessText"
+        ></ngx-expanding-text>
+    </app-example-viewer>
+
+    <app-example-viewer
+            [title]="'Whether the text should be initially expanded'"
+            [ghExampleLink]="ghExampleLink"
+    >
+        <div class="flex items-center gap-2 mb-4">
+            <label>Initially expanded:</label>
+            <input type="checkbox"
+                   [(ngModel)]="initiallyExpanded"
+            >
+            <button type="button"
+                    class="custom-button"
+                    (click)="rerenderInitiallyExpandedExample()"
+            >
+                Rerender
+            </button>
+        </div>
+        <ngx-expanding-text
+                *ngIf="showInitiallyExpandedExample"
+                [text]="lorem200"
+                [initiallyExpanded]="initiallyExpanded"
+        ></ngx-expanding-text>
+    </app-example-viewer>
+</div>

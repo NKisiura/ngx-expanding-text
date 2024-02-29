@@ -4,11 +4,11 @@ import { ExampleRoute } from './shared/types/example-route.enum';
 
 const routes: Routes = [
     {
-        path: ExampleRoute.CUSTOM_TOGGLE_BUTTON,
+        path: ExampleRoute.CONFIGURATIONS,
         loadChildren: () =>
-            import(
-                './examples/custom-toggle-button/custom-toggle-button.module'
-            ).then((m) => m.CustomToggleButtonModule),
+            import('./examples/configurations/configurations.module').then(
+                (m) => m.ConfigurationsModule
+            ),
     },
     {
         path: ExampleRoute.TOGGLE_FROM_OUTSIDE,
@@ -16,6 +16,13 @@ const routes: Routes = [
             import(
                 './examples/toggle-from-outside/toggle-from-outside.module'
             ).then((m) => m.ToggleFromOutsideModule),
+    },
+    {
+        path: ExampleRoute.CUSTOM_TOGGLE_BUTTON,
+        loadChildren: () =>
+            import(
+                './examples/custom-toggle-button/custom-toggle-button.module'
+            ).then((m) => m.CustomToggleButtonModule),
     },
     {
         path: ExampleRoute.STYLED_TEXT,
@@ -26,12 +33,12 @@ const routes: Routes = [
     },
     {
         path: '',
-        redirectTo: ExampleRoute.CUSTOM_TOGGLE_BUTTON,
+        redirectTo: ExampleRoute.CONFIGURATIONS,
         pathMatch: 'full',
     },
     {
         path: '**',
-        redirectTo: ExampleRoute.CUSTOM_TOGGLE_BUTTON,
+        redirectTo: ExampleRoute.CONFIGURATIONS,
         pathMatch: 'full',
     },
 ];
