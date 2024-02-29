@@ -18,6 +18,13 @@ const routes: Routes = [
             ).then((m) => m.ToggleFromOutsideModule),
     },
     {
+        path: ExampleRoute.STYLED_TEXT,
+        loadChildren: () =>
+            import('./examples/styled-text/styled-text.module').then(
+                (m) => m.StyledTextModule
+            ),
+    },
+    {
         path: '',
         redirectTo: ExampleRoute.CUSTOM_TOGGLE_BUTTON,
         pathMatch: 'full',

@@ -1,0 +1,24 @@
+<app-example-viewer
+        [title]="
+        'Apply your own styles to the expanding text'
+    "
+        [ghExampleLink]="ghExampleLink"
+>
+    <div class="mb-2">
+        <span class="mb-1 text-lg">You have several options to apply styles to the expanding text:</span>
+        <ul class="list-disc">
+            <li class="ml-4">Use global css styles</li>
+            <li class="ml-4">Apply text styles for expanding text parent element</li>
+            <li class="ml-4">Use combination of button template and parent element styles if you don't want to style
+                button
+            </li>
+            <li class="ml-4">You can use <code>:host::ng-deep</code> if you don't want to apply styles for parent
+                element
+            </li>
+        </ul>
+    </div>
+    <p class="text-blue-600 italic">
+        <ngx-expanding-text [text]="lorem200"></ngx-expanding-text>
+    </p>
+</app-example-viewer>
+
