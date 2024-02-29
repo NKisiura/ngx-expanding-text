@@ -100,6 +100,7 @@ export class NgxExpandingTextComponent implements OnChanges, OnInit {
 
     ngOnInit(): void {
         this.isExpanded = this.initiallyExpanded;
+        this.cachedTextForView = this.getTextForView();
     }
 
     public get textForView(): string {
