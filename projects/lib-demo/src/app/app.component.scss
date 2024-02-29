@@ -4,6 +4,10 @@
 }
 
 .example-link {
+    &.active {
+        @apply border-gray-800 text-gray-800 pl-3;
+    }
+
     &:first-letter {
         text-transform: uppercase;
     }
