@@ -43,19 +43,19 @@ import { NgxExpandingTextModule } from 'ngx-expanding-text';
 
 ## Configuration
 
-### Input
-| Input name         | Explanation                                            | Mandatory | Type/Supported Values | Default value |
-|--------------------|--------------------------------------------------------|-----------|-----------------------|---------------|
-| text               | The raw text to be displayed in the component.         | yes       | string                | ''            |
-| charCountLimit     | The character count limit for the collapsed text view. | no        | number                | 100           |
-| showEllipsis       | Whether to show ellipsis when the text is collapsed.   | no        | boolean               | true          |
-| initiallyExpanded  | Whether the text should be initially expanded.         | no        | boolean               | false         |
-| moreButtonText     | The text for the 'Show More' button.                   | no        | string                | 'Show More'   |
-| lessButtonText     | The text for the 'Show Less' button.                   | no        | string                | 'Show Less'   |
-| moreButtonTemplate | A custom template for the 'Show More' button.          | no        | TemplateRef<any>      | null          |
-| lessButtonTemplate | A custom template for the 'Show Less' button.          | no        | TemplateRef<any>      | null          |
+### Inputs
+| Input                | Type               | Default     | Required | Description                                            |
+|----------------------|--------------------|-------------|----------|--------------------------------------------------------|
+| [text]               | `string`           | ''          | yes      | The raw text to be displayed in the component.         |
+| [charCountLimit]     | `number`           | 100         | no       | The character count limit for the collapsed text view. |
+| [showEllipsis]       | `boolean`          | true        | no       | Whether to show ellipsis when the text is collapsed.   |
+| [initiallyExpanded]  | `boolean`          | false       | no       | Whether the text should be initially expanded.         |
+| [moreButtonText]     | `string`           | 'Show More' | no       | The text for the 'Show More' button.                   |
+| [lessButtonText]     | `string`           | 'Show Less' | no       | The text for the 'Show Less' button.                   |
+| [moreButtonTemplate] | `TemplateRef<any>` | null        | no       | A custom template for the 'Show More' button.          |
+| [lessButtonTemplate] | `TemplateRef<any>` | null        | no       | A custom template for the 'Show Less' button.          |
 
 ### Output
-| Output name | Explanation                                                      | Mandatory | Type/Supported Values                 |
-|-------------|------------------------------------------------------------------|-----------|---------------------------------------|
-| toggle      | An event that is emitted when the text is expanded or collapsed. | no        | TextToggleEvent {isExpanded: boolean} |
+| Output name | Type                                    | Description                                                      |
+|-------------|-----------------------------------------|------------------------------------------------------------------|
+| (toggle)    | TextToggleEvent `{isExpanded: boolean}` | An event that is emitted when the text is expanded or collapsed. |
