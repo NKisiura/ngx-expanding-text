@@ -1,12 +1,12 @@
 <div class="shadow-md rounded-md border border-gray-200 text-gray-800">
-    <div class="flex items-center justify-between p-4 text-lg font-semibold rounded-t-md border-b border-gray-200"
+    <div class="flex items-center justify-between gap-2 p-4 rounded-t-md border-b border-gray-200"
     >
-        <div>{{ title }}</div>
+        <div class="text-base sm:text-lg font-semibold">{{ title }}</div>
         <a
             *ngIf="ghExampleLink"
             [href]="ghExampleLink"
             target="_blank"
-            class="p-1 w-8 hover:bg-gray-200 rounded-md"
+            class="p-1 w-8 min-w-8 hover:bg-gray-200 rounded-md"
             style="color: #e34c26"
         >
             <svg
