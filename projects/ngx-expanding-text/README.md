@@ -59,3 +59,8 @@ import { NgxExpandingTextModule } from 'ngx-expanding-text';
 | Output name | Type                                    | Description                                                      |
 |-------------|-----------------------------------------|------------------------------------------------------------------|
 | (toggle)    | TextToggleEvent `{isExpanded: boolean}` | An event that is emitted when the text is expanded or collapsed. |
+
+### Methods
+| Method name | Description                                       |
+|-------------|---------------------------------------------------|
+| toggle      | Toggles the expanded/collapsed state of the text. |
