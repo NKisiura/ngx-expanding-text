@@ -1,6 +1,6 @@
 {
   "name": "ngx-expanding-text",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "keywords": [
     "angular"
   ],
@@ -9,9 +9,6 @@
     "email": "nikita.kisiura@gmail.com"
   },
   "repository": "https://github.com/NKisiura/ngx-expanding-text.git",
-  "publishConfig": {
-    "@NKisiura:registry": "https://npm.pkg.github.com"
-  },
   "peerDependencies": {
     "@angular/common": "^12.0.0",
     "@angular/core": "^12.0.0"
