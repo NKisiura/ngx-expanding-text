@@ -49,7 +49,7 @@ import { TextToggleEvent } from './types';
                         ? lessButtonTemplate || defaultButtonTemplate
                         : moreButtonTemplate || defaultButtonTemplate;
                     context: {
-                        toggleFn: toggleTextExpansion.bind(this),
+                        toggleFn: toggle.bind(this),
                         isExpanded: isExpanded
                     }
                 "
@@ -57,10 +57,7 @@ import { TextToggleEvent } from './types';
         </ng-container>
 
         <ng-template #defaultButtonTemplate>
-            <button
-                class="expanding-text-toggle-button"
-                (click)="toggleTextExpansion()"
-            >
+            <button class="expanding-text-toggle-button" (click)="toggle()">
                 {{ isExpanded ? lessButtonText : moreButtonText }}
             </button>
         </ng-template>
@@ -81,7 +78,7 @@ export class NgxExpandingTextComponent implements OnChanges, OnInit {
     @Input() public moreButtonTemplate: TemplateRef<any> | null = null;
     @Input() public lessButtonTemplate: TemplateRef<any> | null = null;
 
-    @Output() public toggle = new EventEmitter<TextToggleEvent>();
+    @Output('toggle') public toggleEvent = new EventEmitter<TextToggleEvent>();
 
     private cachedTextForView: string = '';
     public isExpanded: boolean = false;
@@ -111,10 +108,10 @@ export class NgxExpandingTextComponent implements OnChanges, OnInit {
         return this.rawText.length > this.charCountLimit;
     }
 
-    public toggleTextExpansion(): void {
+    public toggle(): void {
         this.isExpanded = !this.isExpanded;
         this.cachedTextForView = this.getTextForView();
-        this.toggle.emit({ isExpanded: this.isExpanded });
+        this.toggleEvent.emit({ isExpanded: this.isExpanded });
         this.changeDetectorRef.detectChanges();
     }
 
