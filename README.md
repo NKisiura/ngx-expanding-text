@@ -34,7 +34,7 @@ npm install ngx-expanding-text
 |----------------|------------------------------------------------------------------|-------------|---------------------------------------|
 | toggle         | An event that is emitted when the text is expanded or collapsed. | no          | TextToggleEvent {isExpanded: boolean} |
 
-### Maintain
+## Maintenance
 Prepare github pages for the demo app:
 ```
 ng build lib-demo --configuration production --base-href https://nkisiura.github.io/ngx-expanding-text/
