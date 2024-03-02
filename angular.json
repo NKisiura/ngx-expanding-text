@@ -137,5 +137,6 @@
         }
       }
     }
-  }
+  },
+  "defaultProject": "ngx-expanding-text"
 }
