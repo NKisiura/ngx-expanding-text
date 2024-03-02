@@ -39,6 +39,7 @@ import { NgxExpandingTextModule } from 'ngx-expanding-text';
 ## Versions
 | Angular          | ngx-expanding-text |
 |------------------|:------------------:|
+| >=13.0.0 <14.0.0 |       v13.x        |
 | >=12.0.0 <13.0.0 |       v12.x        |
 
 ## Configuration
