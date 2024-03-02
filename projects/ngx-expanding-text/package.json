@@ -1,6 +1,6 @@
 {
   "name": "ngx-expanding-text",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "keywords": [
     "angular",
     "expandable text",
@@ -13,8 +13,8 @@
   },
   "repository": "https://github.com/NKisiura/ngx-expanding-text.git",
   "peerDependencies": {
-    "@angular/common": "^15.0.0",
-    "@angular/core": "^15.0.0"
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
